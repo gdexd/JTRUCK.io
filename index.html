@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAPAN TRUCK — Японская спецтехника с доставкой из Японии</title>
+    <meta name="description" content="Прямые поставки подержанной спецтехники из Японии: крановые установки, грузовики, погрузчики, манипуляторы. Доставка по РФ.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-content">
+                    <div class="contacts-top">
+                        <a href="tel:+79233422340" class="contact-link">
+                            <i class="fas fa-phone"></i> +7 (923) 342-23-40
+                        </a>
+                        <a href="tel:+79832690739" class="contact-link">
+                            <i class="fab fa-whatsapp"></i> +7 (983) 269-07-39
+                        </a>
+                    </div>
+                    <div class="header-actions">
+                        <a href="admin.html" class="admin-link">
+                            <i class="fas fa-cog"></i> Админка
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <div class="container">
+                <div class="nav-container">
+                    <!-- Логотип -->
+                    <div class="logo">
+                        <a href="/" class="logo-link">
+                            <div class="logo-icon">
+                                <i class="fas fa-truck"></i>
+                            </div>
+                            <div class="logo-text">
+                                <span class="logo-main">JAPAN TRUCK</span>
+                                <span class="logo-sub">Японская спецтехника</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Основное меню -->
+                    <ul class="nav-menu" id="navMenu">
+                        <!-- ТЕХНИКА И ЗАПЧАСТИ с выпадающим списком -->
+                        <li class="nav-dropdown">
+                            <a href="#catalog" class="nav-link dropdown-toggle">
+                                <i class="fas fa-th-large"></i> ТЕХНИКА И ЗАПЧАСТИ
+                                <i class="fas fa-chevron-down dropdown-arrow"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="category.html?cat=cranes"><i class="fas fa-crane"></i> Крановые установки</a></li>
+                                <li><a href="category.html?cat=tractors"><i class="fas fa-tractor"></i> Мини-трактора</a></li>
+                                <li><a href="category.html?cat=snowblowers"><i class="fas fa-snowplow"></i> Снегоуборщики</a></li>
+                                <li><a href="category.html?cat=drilling"><i class="fas fa-oil-well"></i> Буровые установки</a></li>
+                                <li><a href="category.html?cat=truck-parts"><i class="fas fa-cogs"></i> Запчасти для грузовиков</a></li>
+                                <li><a href="category.html?cat=trucks"><i class="fas fa-truck-moving"></i> Грузовики</a></li>
+                                <li><a href="category.html?cat=loaders"><i class="fas fa-forklift"></i> Погрузчики</a></li>
+                                <li><a href="category.html?cat=special"><i class="fas fa-tools"></i> Спецтехника</a></li>
+                                <li><a href="category.html?cat=manipulators"><i class="fas fa-robot"></i> Гидроманипуляторы</a></li>
+                                <li><a href="category.html?cat=kmu-parts"><i class="fas fa-wrench"></i> Запчасти на КМУ</a></li>
+                            </ul>
+                        </li>
+                        
+                        <!-- ПОД ЗАКАЗ -->
+                        <li class="nav-item">
+                            <a href="custom-order.html" class="nav-link nav-btn">
+                                <i class="fas fa-clipboard-list"></i> ПОД ЗАКАЗ
+                            </a>
+                        </li>
+                        
+                        <!-- ГЕНЕРАТОРЫ -->
+                        <li class="nav-item">
+                            <a href="generators.html" class="nav-link nav-btn">
+                                <i class="fas fa-bolt"></i> ГЕНЕРАТОРЫ
+                            </a>
+                        </li>
+                        
+                        <!-- Контакты с выпадающим О компании -->
+                        <li class="nav-dropdown">
+                            <a href="#contacts" class="nav-link dropdown-toggle">
+                                <i class="fas fa-phone-alt"></i> Контакты
+                                <i class="fas fa-chevron-down dropdown-arrow"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-right">
+                                <li><a href="#about" id="aboutCompanyLink"><i class="fas fa-building"></i> О компании</a></li>
+                                <li><a href="https://2gis.ru" target="_blank"><i class="fas fa-map-marker-alt"></i> Мы на 2ГИС</a></li>
+                                <li><a href="tel:+79233422340"><i class="fas fa-phone"></i> +7 (923) 342-23-40</a></li>
+                                <li><a href="mailto:info@japantruck.ru"><i class="fas fa-envelope"></i> info@japantruck.ru</a></li>
+                                <li><a href="https://t.me/japantruck" target="_blank"><i class="fab fa-telegram"></i> Telegram</a></li>
+                                <li><a href="https://vk.com/japantruck" target="_blank"><i class="fab fa-vk"></i> ВКонтакте</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <!-- Мобильное меню -->
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Герой-секция -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Японская спецтехника</h1>
+                <p class="hero-subtitle">Прямые поставки из Японии. Более 400 единиц в наличии.</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <i class="fas fa-shipping-fast"></i>
+                        <span>Бесплатная доставка</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Гарантия 1 год</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-history"></i>
+                        <span>С 2010 года на рынке</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Основной контент -->
+    <main class="main-content">
+        <div class="container">
+            <div class="content-wrapper">
+                <!-- Левая колонка - Каталог -->
+                <div class="catalog-section">
+                    <div class="section-header">
+                        <h2><i class="fas fa-list"></i> Каталог техники</h2>
+                        <div class="catalog-filters">
+                            <div class="search-box">
+                                <i class="fas fa-search"></i>
+                                <input type="text" id="searchInput" placeholder="Поиск по марке, модели, артикулу, году...">
+                            </div>
+                            <select id="categoryFilter" class="filter-select">
+                                <option value="">Все категории</option>
+                                <option value="cranes">Крановые установки</option>
+                                <option value="tractors">Мини-трактора</option>
+                                <option value="snowblowers">Снегоуборщики</option>
+                                <option value="drilling">Буровые установки</option>
+                                <option value="truck-parts">Запчасти для грузовиков</option>
+                                <option value="trucks">Грузовики</option>
+                                <option value="loaders">Погрузчики</option>
+                                <option value="special">Спецтехника</option>
+                                <option value="manipulators">Гидроманипуляторы</option>
+                                <option value="kmu-parts">Запчасти на КМУ</option>
+                            </select>
+                            <button class="reset-filter-btn" id="resetFilterBtn" style="display:none;">
+                                <i class="fas fa-times"></i> Сбросить
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Таблица на десктопе -->
+                    <div class="catalog-table-container">
+                        <table class="catalog-table" id="catalogTable">
+                            <thead>
+                                <tr>
+                                    <th><i class="fas fa-image"></i></th>
+                                    <th data-sort="model">Модель</th>
+                                    <th data-sort="year">Год</th>
+                                    <th data-sort="price">Цена</th>
+                                    <th>Статус</th>
+                                    <th>Действия</th>
+                                </tr>
+                            </thead>
+                            <tbody id="catalogBody">
+                                <!-- Заполняется через JS -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Карточки на мобильных -->
+                    <div class="mobile-catalog" id="mobileCatalog">
+                        <!-- Заполняется через JS -->
+                    </div>
+                </div>
+
+                <!-- Правая колонка - Сайдбар -->
+                <aside class="sidebar">
+                    <!-- Спецпредложения -->
+                    <div class="sidebar-widget" id="specialsWidget">
+                        <div class="widget-header">
+                            <h3><i class="fas fa-fire"></i> Спецпредложения</h3>
+                            <i class="fas fa-chevron-down toggle-btn"></i>
+                        </div>
+                        <div class="widget-content">
+                            <div class="specials-list" id="specialsList">
+                                <!-- Заполняется через JS -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Запчасти -->
+                    <div class="sidebar-widget" id="partsWidget">
+                        <div class="widget-header">
+                            <h3><i class="fas fa-cogs"></i> Запчасти</h3>
+                            <i class="fas fa-chevron-down toggle-btn"></i>
+                        </div>
+                        <div class="widget-content">
+                            <ul class="parts-list" id="partsList">
+                                <!-- Заполняется через JS -->
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Быстрые контакты -->
+                    <div class="sidebar-widget">
+                        <div class="widget-header">
+                            <h3><i class="fas fa-headset"></i> Контакты</h3>
+                        </div>
+                        <div class="widget-content">
+                            <div class="contacts-widget">
+                                <a href="tel:+79233422340" class="contact-item">
+                                    <i class="fas fa-phone"></i>
+                                    <div>
+                                        <strong>+7 (923) 342-23-40</strong>
+                                        <small>МЕГАФОН, WhatsApp</small>
+                                    </div>
+                                </a>
+                                <a href="tel:+79832690739" class="contact-item">
+                                    <i class="fab fa-whatsapp"></i>
+                                    <div>
+                                        <strong>+7 (983) 269-07-39</strong>
+                                        <small>МТС, WhatsApp</small>
+                                    </div>
+                                </a>
+                                <div class="contact-item">
+                                    <i class="fas fa-clock"></i>
+                                    <div>
+                                        <strong>9:00 - 18:00</strong>
+                                        <small>Пн-Пт, обед 13:00-14:00</small>
+                                    </div>
+                                </div>
+                                <button class="btn-contact" id="sidebarContactBtn">
+                                    <i class="fas fa-comments"></i> Связаться
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Секция О компании -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2><i class="fas fa-building"></i> О компании</h2>
+                    <p id="aboutText">JAPAN TRUCK — ведущий поставщик японской спецтехники в России с 2010 года. Мы осуществляем прямые поставки из Японии крановых установок, грузовиков, погрузчиков, манипуляторов и другой спецтехники.</p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Более 400 единиц техники в наличии</span>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-shipping-fast"></i>
+                            <span>Доставка по всей России</span>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Гарантия 1 год</span>
+                        </div>
+                    </div>
+                    <div class="about-contacts">
+                        <a href="https://2gis.ru" target="_blank" class="about-link">
+                            <i class="fas fa-map-marker-alt"></i> Мы на 2ГИС
+                        </a>
+                        <a href="tel:+79233422340" class="about-link">
+                            <i class="fas fa-phone"></i> +7 (923) 342-23-40
+                        </a>
+                        <a href="mailto:j-truck.ru@mail.ru" class="about-link">
+                            <i class="fas fa-envelope"></i> j-truck.ru@mail.ru
+                        </a>
+                        <a href="https://t.me/ecokran" target="_blank" class="about-link">
+                            <i class="fab fa-telegram"></i> Telegram
+                        </a>
+                        <a href="https://vk.com/id398793633" target="_blank" class="about-link">
+                            <i class="fab fa-vk"></i> ВКонтакте
+                        </a>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDQwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjZjk3MzE2Ii8+Cjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IndoaXRlIj5KQVBBNiBUUlVDSzwvdGV4dD4KPC9zdmc+" alt="JAPAN TRUCK" id="aboutImage">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-truck"></i> JAPAN TRUCK
+                    </div>
+                    <p>Официальный поставщик японской спецтехники в России</p>
+                    <div class="social-links">
+                        <a href="https://wa.me/79233422340" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://t.me/ecokran" target="_blank"><i class="fab fa-telegram"></i></a>
+                        <a href="https://vk.com/id398793633" target="_blank"><i class="fab fa-vk"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Категории</h4>
+                    <ul>
+                        <li><a href="#cranes">Крановые установки</a></li>
+                        <li><a href="#trucks">Грузовики</a></li>
+                        <li><a href="#loaders">Погрузчики</a></li>
+                        <li><a href="#manipulators">Манипуляторы</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Компания</h4>
+                    <ul>
+                        <li><a href="#about">О компании</a></li>
+                        <li><a href="#delivery">Доставка</a></li>
+                        <li><a href="#payment">Оплата</a></li>
+                        <li><a href="#contacts">Контакты</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> г. Красноярск, пр. Котельникова 29</p>
+                    <p><i class="fas fa-phone"></i> +7 (923) 342-23-40</p>
+                    <p><i class="fas fa-envelope"></i> j-truck.ru@mail.ru</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2024 JAPAN TRUCK. Все права защищены.</p>
+                <p>Вся информация на сайте не является публичной офертой.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно товара -->
+    <div class="modal-overlay" id="productModal">
+        <div class="modal product-modal">
+            <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+            <div class="modal-content" id="productModalContent">
+                <!-- Заполняется через JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно связи -->
+    <div class="modal-overlay" id="contactModal">
+        <div class="modal contact-modal">
+            <button class="modal-close" id="contactModalClose"><i class="fas fa-times"></i></button>
+            
+            <div class="contact-header">
+                <h2><i class="fas fa-headset"></i> Свяжитесь с нами</h2>
+                <p>Выберите удобный способ связи</p>
+            </div>
+            
+            <div class="contact-methods">
+                <div class="contact-method" onclick="openWhatsApp()">
+                    <div class="method-icon whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <div class="method-info">
+                        <h4>WhatsApp</h4>
+                        <p>Быстрый ответ в чате</p>
+                        <div class="method-contacts">
+                            <span>+7-923-342-2340</span>
+                            <span>+7-983-269-0739</span>
+                        </div>
+                    </div>
+                    <div class="method-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+                
+                <div class="contact-method" onclick="openTelegram()">
+                    <div class="method-icon telegram">
+                        <i class="fab fa-telegram"></i>
+                    </div>
+                    <div class="method-info">
+                        <h4>Telegram</h4>
+                        <p>@ecokran</p>
+                        <div class="method-contacts">
+                            <span>Написать в Telegram</span>
+                        </div>
+                    </div>
+                    <div class="method-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+                
+                <div class="contact-method" onclick="openVK()">
+                    <div class="method-icon vk">
+                        <i class="fab fa-vk"></i>
+                    </div>
+                    <div class="method-info">
+                        <h4>ВКонтакте</h4>
+                        <p>Группа и сообщения</p>
+                        <div class="method-contacts">
+                            <span>vk.com/id398793633</span>
+                        </div>
+                    </div>
+                    <div class="method-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+                
+                <div class="contact-method" onclick="callPhone()">
+                    <div class="method-icon phone">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="method-info">
+                        <h4>Позвонить</h4>
+                        <p>Телефоны для связи</p>
+                        <div class="method-contacts">
+                            <span>+7-923-342-2340 (МЕГАФОН)</span>
+                            <span>+7-983-269-0739 (МТС)</span>
+                        </div>
+                    </div>
+                    <div class="method-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+                
+                <div class="contact-method" onclick="sendEmail()">
+                    <div class="method-icon email">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="method-info">
+                        <h4>Email</h4>
+                        <p>Ответим в течение рабочего дня</p>
+                        <div class="method-contacts">
+                            <span>j-truck.ru@mail.ru</span>
+                        </div>
+                    </div>
+                    <div class="method-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-details">
+                <div class="detail-section">
+                    <h4><i class="fas fa-map-marker-alt"></i> Адрес</h4>
+                    <p>г. Красноярск, пр. Котельникова, 29, пос. Солонцы</p>
+                    <a href="https://2gis.ru/krasnoyarsk/inside/985798073680123/firm/985690700084640" 
+                       class="map-link" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> Открыть в 2ГИС
+                    </a>
+                </div>
+                
+                <div class="detail-section">
+                    <h4><i class="fas fa-clock"></i> Режим работы</h4>
+                    <div class="schedule">
+                        <div class="schedule-item">
+                            <span>Пн-Пт:</span>
+                            <span>9:00 - 18:00</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span>Обед:</span>
+                            <span>13:00 - 14:00</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span>Выходной:</span>
+                            <span>Сб, Вс</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Кнопка наверх -->
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

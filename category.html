@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог | JAPAN TRUCK</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .page-hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            padding: 50px 0;
+            color: white;
+            text-align: center;
+        }
+        .page-hero h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+        .page-hero p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        .category-content {
+            padding: 40px 0;
+        }
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        .product-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        .product-card-image {
+            height: 200px;
+            background: #f3f4f6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .product-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .product-card-image i {
+            font-size: 50px;
+            color: #d1d5db;
+        }
+        .product-card-body {
+            padding: 20px;
+        }
+        .product-card-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 8px;
+        }
+        .product-card-article {
+            font-size: 13px;
+            color: var(--gray);
+            margin-bottom: 12px;
+        }
+        .product-card-specs {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+        .spec-item {
+            font-size: 13px;
+            color: var(--gray);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .spec-item i {
+            color: var(--primary);
+        }
+        .product-card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 15px;
+            border-top: 1px solid var(--border);
+        }
+        .product-price {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--primary);
+        }
+        .product-status {
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        .status-instock {
+            background: #d1fae5;
+            color: #059669;
+        }
+        .status-order {
+            background: #fef3c7;
+            color: #d97706;
+        }
+        .btn-details {
+            padding: 10px 20px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        .btn-details:hover {
+            background: var(--primary-dark);
+        }
+        .empty-category {
+            text-align: center;
+            padding: 80px 20px;
+            color: var(--gray);
+        }
+        .empty-category i {
+            font-size: 80px;
+            color: #d1d5db;
+            margin-bottom: 20px;
+        }
+        .breadcrumb {
+            padding: 15px 0;
+            background: var(--light);
+        }
+        .breadcrumb a {
+            color: var(--gray);
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            color: var(--primary);
+        }
+        .breadcrumb span {
+            color: var(--dark);
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-content">
+                    <div class="contacts-top">
+                        <a href="tel:+79233422340" class="contact-link">
+                            <i class="fas fa-phone"></i> +7 (923) 342-23-40
+                        </a>
+                        <a href="mailto:j-truck.ru@mail.ru" class="contact-link">
+                            <i class="fas fa-envelope"></i> j-truck.ru@mail.ru
+                        </a>
+                    </div>
+                    <div class="header-actions">
+                        <a href="admin.html" class="admin-link">
+                            <i class="fas fa-user-shield"></i> Админ
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <div class="container">
+                <div class="nav-container">
+                    <a href="index.html" class="logo-link">
+                        <div class="logo-icon"><i class="fas fa-truck"></i></div>
+                        <div class="logo-text">
+                            <span class="logo-main">JAPAN TRUCK</span>
+                            <span class="logo-sub">Спецтехника из Японии</span>
+                        </div>
+                    </a>
+                    <ul class="nav-menu">
+                        <li><a href="index.html"><i class="fas fa-home"></i> Главная</a></li>
+                        <li><a href="custom-order.html" class="nav-btn"><i class="fas fa-clipboard-list"></i> ПОД ЗАКАЗ</a></li>
+                        <li><a href="generators.html" class="nav-btn"><i class="fas fa-bolt"></i> ГЕНЕРАТОРЫ</a></li>
+                        <li><a href="index.html#about"><i class="fas fa-building"></i> О компании</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Хлебные крошки -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="index.html"><i class="fas fa-home"></i> Главная</a> / 
+            <span id="breadcrumbCategory">Категория</span>
+        </div>
+    </div>
+
+    <!-- Герой -->
+    <section class="page-hero">
+        <div class="container">
+            <h1><i id="categoryIcon" class="fas fa-truck"></i> <span id="categoryTitle">Категория</span></h1>
+            <p id="categoryDesc">Техника из Японии</p>
+        </div>
+    </section>
+
+    <!-- Контент -->
+    <section class="category-content">
+        <div class="container">
+            <div class="products-grid" id="productsGrid">
+                <!-- Заполняется через JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>© 2024 JAPAN TRUCK. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const categories = {
+            'cranes': { name: 'Крановые установки', icon: 'fa-crane', desc: 'Японские крановые установки с доставкой' },
+            'tractors': { name: 'Мини-трактора', icon: 'fa-tractor', desc: 'Компактные трактора из Японии' },
+            'snowblowers': { name: 'Снегоуборщики', icon: 'fa-snowplow', desc: 'Надёжные снегоуборщики' },
+            'drilling': { name: 'Буровые установки', icon: 'fa-oil-well', desc: 'Буровое оборудование' },
+            'truck-parts': { name: 'Запчасти для грузовиков', icon: 'fa-cogs', desc: 'Оригинальные запчасти' },
+            'trucks': { name: 'Грузовики', icon: 'fa-truck-moving', desc: 'Японские грузовики' },
+            'loaders': { name: 'Погрузчики', icon: 'fa-forklift', desc: 'Вилочные и фронтальные погрузчики' },
+            'special': { name: 'Спецтехника', icon: 'fa-tools', desc: 'Различная спецтехника' },
+            'manipulators': { name: 'Гидроманипуляторы', icon: 'fa-robot', desc: 'Манипуляторы и КМУ' },
+            'kmu-parts': { name: 'Запчасти на КМУ', icon: 'fa-wrench', desc: 'Запчасти для манипуляторов' }
+        };
+
+        function getUrlParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        function formatPrice(price) {
+            return new Intl.NumberFormat('ru-RU').format(price);
+        }
+
+        function loadCategoryProducts() {
+            const cat = getUrlParam('cat');
+            const catInfo = categories[cat] || { name: 'Все товары', icon: 'fa-th-large', desc: 'Каталог техники' };
+            
+            // Обновляем заголовки
+            document.getElementById('categoryTitle').textContent = catInfo.name;
+            document.getElementById('categoryDesc').textContent = catInfo.desc;
+            document.getElementById('breadcrumbCategory').textContent = catInfo.name;
+            document.getElementById('categoryIcon').className = 'fas ' + catInfo.icon;
+            document.title = catInfo.name + ' | JAPAN TRUCK';
+            
+            // Загружаем товары
+            const allProducts = JSON.parse(localStorage.getItem('japanTruckProducts') || '[]');
+            const products = cat ? allProducts.filter(p => p.category === cat) : allProducts;
+            
+            const grid = document.getElementById('productsGrid');
+            
+            if (products.length === 0) {
+                grid.innerHTML = `
+                    <div class="empty-category">
+                        <i class="fas ${catInfo.icon}"></i>
+                        <h3>В этой категории пока нет товаров</h3>
+                        <p>Загляните позже или свяжитесь с нами для заказа</p>
+                        <a href="custom-order.html" class="btn-details" style="margin-top:20px;display:inline-block;text-decoration:none;">
+                            <i class="fas fa-clipboard-list"></i> Заказать технику
+                        </a>
+                    </div>
+                `;
+                return;
+            }
+            
+            grid.innerHTML = products.map(p => `
+                <div class="product-card">
+                    <div class="product-card-image">
+                        ${p.images && p.images[0] ? 
+                            `<img src="${p.images[0]}" alt="${p.model}">` : 
+                            `<i class="fas fa-truck"></i>`
+                        }
+                    </div>
+                    <div class="product-card-body">
+                        <div class="product-card-title">${p.model}</div>
+                        <div class="product-card-article">Арт: ${p.article}</div>
+                        <div class="product-card-specs">
+                            ${p.year ? `<span class="spec-item"><i class="fas fa-calendar"></i> ${p.year} г.</span>` : ''}
+                            ${p.capacity ? `<span class="spec-item"><i class="fas fa-weight"></i> ${p.capacity} т</span>` : ''}
+                            ${p.boom ? `<span class="spec-item"><i class="fas fa-ruler"></i> ${p.boom} м</span>` : ''}
+                        </div>
+                        <div class="product-card-footer">
+                            <div class="product-price">${formatPrice(p.price)} ₽</div>
+                            <span class="product-status ${p.inStock ? 'status-instock' : 'status-order'}">
+                                ${p.inStock ? 'В наличии' : 'Под заказ'}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        document.addEventListener('DOMContentLoaded', loadCategoryProducts);
+    </script>
+</body>
+</html>

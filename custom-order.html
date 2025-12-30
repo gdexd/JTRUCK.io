@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ПОД ЗАКАЗ | JAPAN TRUCK</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .page-hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            padding: 60px 0;
+            color: white;
+            text-align: center;
+        }
+        .page-hero h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+        .page-hero p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+        .custom-order-content {
+            padding: 60px 0;
+        }
+        .order-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .order-text {
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--gray);
+            white-space: pre-line;
+        }
+        .order-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        .order-feature {
+            background: var(--light);
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        .order-feature i {
+            font-size: 40px;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        .order-feature h3 {
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+        .order-feature p {
+            color: var(--gray);
+            font-size: 14px;
+        }
+        .order-cta {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 40px;
+            border-top: 1px solid var(--border);
+        }
+        .order-cta .btn-primary {
+            padding: 18px 40px;
+            font-size: 18px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s;
+        }
+        .order-cta .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(249, 115, 22, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-content">
+                    <div class="contacts-top">
+                        <a href="tel:+79233422340" class="contact-link">
+                            <i class="fas fa-phone"></i> +7 (923) 342-23-40
+                        </a>
+                        <a href="mailto:j-truck.ru@mail.ru" class="contact-link">
+                            <i class="fas fa-envelope"></i> j-truck.ru@mail.ru
+                        </a>
+                    </div>
+                    <div class="header-actions">
+                        <a href="admin.html" class="admin-link">
+                            <i class="fas fa-user-shield"></i> Админ
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <div class="container">
+                <div class="nav-container">
+                    <a href="index.html" class="logo-link">
+                        <i class="fas fa-truck logo-icon"></i>
+                        <div class="logo-text">
+                            <span class="logo-main">JAPAN TRUCK</span>
+                            <span class="logo-sub">Спецтехника из Японии</span>
+                        </div>
+                    </a>
+                    <ul class="nav-menu">
+                        <li><a href="index.html"><i class="fas fa-home"></i> Главная</a></li>
+                        <li><a href="custom-order.html" class="nav-btn active"><i class="fas fa-clipboard-list"></i> ПОД ЗАКАЗ</a></li>
+                        <li><a href="generators.html" class="nav-btn"><i class="fas fa-bolt"></i> ГЕНЕРАТОРЫ</a></li>
+                        <li><a href="index.html#about"><i class="fas fa-building"></i> О компании</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Герой -->
+    <section class="page-hero">
+        <div class="container">
+            <h1><i class="fas fa-clipboard-list"></i> ПОД ЗАКАЗ</h1>
+            <p>Привезём любую технику из Японии под ваши требования</p>
+        </div>
+    </section>
+
+    <!-- Контент -->
+    <section class="custom-order-content">
+        <div class="container">
+            <div class="order-card">
+                <div class="order-text" id="customOrderText">
+Мы осуществляем поставки спецтехники из Японии под заказ. Если вы не нашли нужную технику в нашем каталоге, мы можем привезти её специально для вас.
+
+Работаем напрямую с японскими аукционами и поставщиками, что позволяет нам предложить лучшие цены и гарантировать качество техники.
+
+Срок поставки: от 30 до 60 дней в зависимости от типа техники и логистики.
+
+Предоплата: 30-50% от стоимости заказа.
+
+Гарантия: 1 год на всю технику.
+                </div>
+                
+                <div class="order-features">
+                    <div class="order-feature">
+                        <i class="fas fa-search"></i>
+                        <h3>Поиск техники</h3>
+                        <p>Найдём любую модель на японских аукционах</p>
+                    </div>
+                    <div class="order-feature">
+                        <i class="fas fa-ship"></i>
+                        <h3>Доставка</h3>
+                        <p>Организуем доставку до вашего города</p>
+                    </div>
+                    <div class="order-feature">
+                        <i class="fas fa-file-contract"></i>
+                        <h3>Документы</h3>
+                        <p>Полное оформление и растаможка</p>
+                    </div>
+                    <div class="order-feature">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Гарантия</h3>
+                        <p>Гарантия 1 год на всю технику</p>
+                    </div>
+                </div>
+                
+                <div class="order-cta">
+                    <button class="btn-primary" onclick="openContactModal()">
+                        <i class="fas fa-phone"></i> Оставить заявку
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>© 2024 JAPAN TRUCK. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Загрузка текста из localStorage
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedText = localStorage.getItem('customOrderText');
+            if (savedText) {
+                document.getElementById('customOrderText').textContent = savedText;
+            }
+        });
+        
+        function openContactModal() {
+            window.location.href = 'index.html#contacts';
+        }
+    </script>
+</body>
+</html>
